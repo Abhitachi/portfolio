@@ -1,5 +1,5 @@
 import React from "react";
-import Typical from "react-typical";
+import { TypeAnimation } from "react-type-animation";
 import "./Profile.css";
 
 export default function Profile() {
@@ -34,16 +34,17 @@ export default function Profile() {
               {" "}
               <h1>
                 {""}
-                <Typical
-                  loop={Infinity}
-                  steps={[
-                    "Front-End Developer 💻 ",
+                <TypeAnimation
+                  repeat={Infinity}
+                  sequence={[
+                    "Full-Stack Developer 💻 ",
                     1000,
                     "",
                     1000,
                     // "UI/UX Developer",
                     // 1000,
                   ]}
+                  speed={50}
                 />
               </h1>
               <span className="profile-role-tagline">
@@ -52,8 +53,11 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn primary-btn">Hire Me </button>
-            <a href="ehizcv.pdf" download="Ehiedu ehizcv.pdf">
+            {/* <button className="btn primary-btn">Hire Me </button> */}
+            <a
+              href="abhitachi-resume11.pdf"
+              download="abhishek-resume.pdf"
+            >
               <button className="btn highlighted-btn">Get Resume</button>
             </a>
           </div>

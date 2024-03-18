@@ -1,7 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Animations from "../../Utilities/Animations";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
-import Animations from "../../Utilities/Animations";
+
+import css from "../../assets/skills/css.png";
+import html from "../../assets/skills/html.png";
+import java from "../../assets/skills/java.png";
+import javaScript from "../../assets/skills/javascript.png";
+import mongodb from "../../assets/skills/mongodb.png";
+import sql from "../../assets/skills/mysql.png";
+import node from "../../assets/skills/node.png";
+import react from "../../assets/skills/react.png";
+import tailwind from "../../assets/skills/tailwind.png";
+import typescript from "../../assets/skills/typescript.png";
+
 import "./AboutMe.css";
 
 export default function AboutMe(props) {
@@ -23,7 +35,7 @@ export default function AboutMe(props) {
         "Building REST API",
         "Managing database",
       ],
-      heading: "Here are a Few Highlights:",
+      heading: "Skills",
     },
   };
   const renderHighlight = () => {
@@ -54,18 +66,58 @@ export default function AboutMe(props) {
               </div>
               {renderHighlight()}
             </div>
-            <div className="about-me-options">
-              <button
-                className="btn primary-btn"
-                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-              >
-                {" "}
-                Hire Me{" "}
-              </button>
-              <a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
-                <button className="btn highlighted-btn">Get Resume</button>
-              </a>
-            </div>
+            <section className="skills">
+              <h3>Skills</h3>
+              <div className="skill-container">
+                <div className="skill-card">
+                  <p>Java</p>
+                  <img src={java} alt="" />
+                </div>
+                <div className="skill-card">
+                  <p>JavaScript</p>
+                  <img src={javaScript} alt="" />
+                </div>
+
+                <div className="skill-card">
+                  <p>React</p>
+                  <img src={react} alt="" />
+                </div>
+
+                <div className="skill-card">
+                  <p>MongoDB</p>
+                  <img src={mongodb} alt="" />
+                </div>
+
+                <div className="skill-card">
+                  <p>Node</p>
+                  <img src={node} alt="" />
+                </div>
+
+                <div className="skill-card">
+                  <p>HTML</p>
+                  <img src={html} alt="" />
+                </div>
+
+                <div className="skill-card">
+                  <p>CSS</p>
+                  <img src={css} alt="" />
+                </div>
+
+                <div className="skill-card">
+                  <p>Tailwind CSS</p>
+                  <img src={tailwind} alt="" />
+                </div>
+
+                <div className="skill-card">
+                  <p>MYSQL</p>
+                  <img src={sql} alt="" />
+                </div>
+                <div className="skill-card">
+                  <p>TypeScript</p>
+                  <img src={typescript} alt="" />
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

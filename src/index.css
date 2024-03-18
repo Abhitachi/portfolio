@@ -133,3 +133,69 @@ body ::-webkit-scrollbar-thumb {
   transform: translateY(80px);
   transition: all 0.8s ease;
 }
+
+.preloading-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* max-height: ; */
+  margin-top: 250px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 6px;
+  margin-top: 4px;
+  display: inline-block;
+  animation: loadingAnimation 100 all  repeat all;
+  transition: all;
+}
+
+.loading-text{
+  display: flex;
+  gap:1rem;
+  /* flex-direction: column; */
+}
+
+.green {
+  background-color: #6fb936;
+}
+
+.orange {
+  background-color: #f38630;
+}
+
+.red {
+  background-color: #FF0000;
+}
+
+.blue {
+  background-color: #0000FF;
+}
+
+.indigo{
+  background-color: #4B0082;
+}
+
+.violet{
+  background-color: #9400D3;
+}
+
+.yellow{
+  background-color:  #FFFF00;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 1; /* Red */
+  }
+  50% {
+    opacity: 0.5;; /* Green */
+  }
+  100% {
+    opacity: 0;/* Blue */
+  }
+}

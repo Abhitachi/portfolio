@@ -1,14 +1,12 @@
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import {
   GET_SCREEN_INDEX,
   TOTAL_SCREENS,
 } from "../../../Utilities/CommanUtils";
 import ScrollService from "../../../Utilities/ScrollService";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import {
-  FontAwesomeIcon,
-  fontAwesomeIcon,
-} from "@fortawesome/react-fontawesome";
+import logo from "../../../assets/Home/logoportfolio.jpg";
 import "./header.css";
 
 export default function Header() {
@@ -73,7 +71,8 @@ export default function Header() {
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">
-          <span>ABHITACHI</span>
+          {/* <span>ABHITACHI</span> */}
+          <img src={logo} alt=""  className="logo"/>
         </div>
         <div
           className={

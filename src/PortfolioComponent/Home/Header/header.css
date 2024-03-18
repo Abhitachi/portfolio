@@ -3,20 +3,30 @@
   justify-content: center;
   height: 149px;
   color: var(--white);
+  color: #000;
 }
 .header-parent {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 100%;
-  width: 70%;
+  width: 100%;
   color: var(--white);
+  color: #000;
 }
 .header-logo {
-  font-size: 50px;
+  width: 140px;
+  height: 100%;
   font-family: "Poppins ExtraBold";
   color: var(--white);
+  color: #000;
 }
+
+.header-logo img{
+  width: 100%;
+  object-fit: cover;
+}
+
 .header-options {
   display: flex;
   align-items: center;
@@ -29,10 +39,12 @@
 .header-hamburger {
   display: none;
   color: var(--white);
+  color: #000;
 }
 .header-option-seperator {
   margin: 0 50px 0 0;
   color: var(--white);
+  color: #000;
 }
 .selected-header-option {
   color: var(--dark-orange);
@@ -50,8 +62,9 @@
   }
   .header-parent {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 0px;
     position: relative;
+    justify-content: space-between;
   }
   .header-options {
     display: flex;
@@ -62,22 +75,26 @@
     top: 0px;
     height: 100vh;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #1f2235;
+    color: white;
     z-index: 1000;
     opacity: 0.5;
   }
   .header-option-seperator {
     margin: 0;
+    color: white;
   }
   .selected-header-option {
     color: var(--white);
+    /* color: #000; */
   }
   .header-hamburger-bars {
     font-size: 36px;
     cursor: pointer;
     margin: 0px 10px;
     color: var(--white);
+    color: #000;
   }
   .show-hamburger-options {
     left: 0;

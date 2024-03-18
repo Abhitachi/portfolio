@@ -26,6 +26,7 @@
 }
 .primary-text {
   color: (--white);
+  color: #000;
 }
 .highlighted-text {
   color: var(--dark-orange);
@@ -48,17 +49,17 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 0px var(--white);
-  border-radius: 50%;
+  border-radius: 80%;
   height: 380px;
-  width: 380px;
+  width: 260px;
   margin: 0 0 0 100px;
 }
 .profile-picture-background {
   height: 92%;
-  width: 92%;
+  width: 90%;
   background-image: url("../../../assets/Home/IMG-20190608-WA0004.png");
   background-size: cover;
-  border-radius: 50%;
+  border-radius: 10%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -131,5 +132,9 @@
   }
   .profile-details {
     width: 90%;
+  }
+  .primary-text h1{
+    font-size: large;
+    font-weight: bolder;
   }
 }

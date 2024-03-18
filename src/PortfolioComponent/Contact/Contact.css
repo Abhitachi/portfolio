@@ -1,0 +1,112 @@
+.main-container {
+    min-height: 100vh;
+    /* background-image: url("../../assets/ContactMe/contact_us.jpeg"); */
+  
+    margin: 0 0 0 0;
+  }
+  
+  .central-form {
+    max-width: 1100px;
+    padding: 10px;
+    display: flex;
+    border-radius: 12px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #1f2235; */
+  }
+  
+
+  .central-form h2,h1 {
+    color: #fff;    
+    color: #000;
+    font-family: "Poppins Bold";
+    letter-spacing: 0.2rem;
+    margin-bottom: 20px;
+  }
+
+  
+
+  .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap:1rem;
+  }
+  .col i {
+    padding: 7px;
+    color: #000;
+  }
+  .col i:hover {
+    transform: scale(1.5);
+  }
+  
+  .social-icons{
+    display: flex;
+    gap:1rem;
+    font-size: 24px;
+    font-weight: bolder;
+    /* position: fixed; */
+  }
+
+  .title{
+    margin-top: 1rem;
+  }
+
+  .title a{
+    text-decoration-color: #000;
+    color: #000;
+    display: block;
+    /* position: fixed; */
+  }
+
+  .title a ::after {
+    content: "";
+    display: block;
+  }
+  .fadeIn{
+    animation: 3s fadeIn 1s;
+    transition: ease-in 2s;
+  }
+
+  @keyframes fadeIn{
+    0%{
+      opacity: 5;
+      transform: translateY(80px);
+    }
+    50%{
+      opacity: 3;
+      transform: translateY(40px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @media screen and (min-width: 940px) {
+    .back-form {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+  
+    .img-back {
+      flex: 1;
+      align-self: center;
+      margin-right: 20px;
+    }
+  
+    form {
+      flex: 0.9;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    .central-form h2 {
+      font-size: 16px;
+    }
+  }
