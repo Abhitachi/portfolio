@@ -150,7 +150,7 @@ body ::-webkit-scrollbar-thumb {
   border-radius: 6px;
   margin-top: 4px;
   display: inline-block;
-  animation: loadingAnimation 100 all  repeat all;
+  animation: 0.5s loadingAnimation 0.5s all  repeat all;
   transition: all;
 }
 
@@ -190,12 +190,15 @@ body ::-webkit-scrollbar-thumb {
 
 @keyframes loadingAnimation {
   0% {
-    opacity: 1; /* Red */
+    opacity: 1;
+    transform: translateY(-80px); /* Red */
   }
   50% {
     opacity: 0.5;; /* Green */
+    transform: translateY(-40px); 
   }
   100% {
     opacity: 0;/* Blue */
+    transform: translateY(0px); 
   }
 }

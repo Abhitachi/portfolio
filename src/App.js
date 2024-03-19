@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import PortfolioContainer from "./PortfolioComponent/PortfolioContainer";
 import PreloadingPage from "./PortfolioComponent/PreloadingPage";
