@@ -7,6 +7,7 @@ import {
 } from "../../../Utilities/CommanUtils";
 import ScrollService from "../../../Utilities/ScrollService";
 import logo from "../../../assets/Home/logoportfolio.jpg";
+import { motion } from "framer-motion/dist/framer-motion";
 import "./header.css";
 
 export default function Header() {
@@ -70,11 +71,18 @@ export default function Header() {
         >
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
-        <div className="header-logo">
+        <motion.div 
+        initial={{opacity:0}}
+        whileInView ={{opacity:1}}
+        transistion ={{duration:0.5}}
+        className="header-logo">
           {/* <span>ABHITACHI</span> */}
-          <img src={logo} alt=""  className="logo"/>
-        </div>
-        <div
+          <img src={logo} alt="" className="logo" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
           className={
             showHeaderOptions
               ? "header-options show-hamburger-options"
@@ -82,7 +90,7 @@ export default function Header() {
           }
         >
           {getHeaderOptions()}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

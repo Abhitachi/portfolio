@@ -1,3 +1,4 @@
+import { motion } from "framer-motion/dist/framer-motion";
 import gsap from "gsap";
 import React, { useEffect } from "react";
 
@@ -85,19 +86,46 @@ const PreloadingPage = () => {
   });
 
   return (
-    <div className="preloading-container">
-      <div className="loader"></div>
-      <p>Code is Poetry</p>
-      <div className="loading-text">
-        {/* <img src={preloader} alt="" /> */}
+    <div className="preloader">
+      <div className="preloading-container">
+        <div className="loader">
+          <motion.span
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1 }}
+            className="firstWord mr-2 "
+          >
+            Code
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1.5 }}
+            className="secondWord mr-1"
+          >
+            is
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 2 }}
+            className="thirdWord mr-2"
+          >
+            {" "}
+            Poetry
+          </motion.span>
+        </div>
+        <div className="loading-text">
+          {/* <img src={preloader} alt="" /> */}
 
-        <div className="box red"></div>
-        <div className="box orange"></div>
-        <div className="box yellow"></div>
-        <div className="box green"></div>
-        <div className="box blue"></div>
-        <div className="box indigo"></div>
-        <div className="box violet"></div>
+          <div className="box red"></div>
+          <div className="box orange"></div>
+          <div className="box yellow"></div>
+          <div className="box green"></div>
+          <div className="box blue"></div>
+          <div className="box indigo"></div>
+          <div className="box violet"></div>
+        </div>
       </div>
     </div>
   );

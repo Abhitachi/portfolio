@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0 0 0;
+  margin: 120px 0 0 0;
   /* background-color:  #fafafa; */
 }
 .about-me-parent {
@@ -131,6 +131,10 @@
   }
 }
 @media only screen and (max-width: 466px) {
+  .about-me-container{
+    /* overflow-x: hidden; */
+    /* width: 90vw; */
+  }
   .about-me-options {
     display: flex;
     flex-direction: column;

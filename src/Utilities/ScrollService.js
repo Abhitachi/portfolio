@@ -1,5 +1,5 @@
-import { TOTAL_SCREENS } from "./CommanUtils";
 import { Subject } from "rxjs";
+import { TOTAL_SCREENS } from "./CommanUtils";
 
 export default class ScrollService {
   /* SINGLETON CLASS INSTANCE */
@@ -66,7 +66,7 @@ export default class ScrollService {
       let partiallyVisible = this.isElementInView(screenFromDOM, "partial");
 
       if (fullyVisible || partiallyVisible) {
-        if (partiallyVisible && !screen.alreadyRendered) {
+        if (partiallyVisible) {
           //BROADCAST FADE IN EFFECT
           ScrollService.currentScreenFadeIn.next({
             fadeInScreen: screen.screen_name,

@@ -1,8 +1,8 @@
+import { motion } from "framer-motion/dist/framer-motion";
 import React from "react";
 import Animations from "../../Utilities/Animations";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
-
 import css from "../../assets/skills/css.png";
 import html from "../../assets/skills/html.png";
 import java from "../../assets/skills/java.png";
@@ -29,9 +29,10 @@ export default function AboutMe(props) {
       "A Software Developer Enthusiast, proficient in programming languages such as Java and JavaScript. Strong background in object-oriented programming, functional programming, database management and software development lifecycle. A quick learner with strong problem-solving skills, able to work efficiently both independently and in a team environment.",
     highlights: {
       bullets: [
-        "Full Stack web development",
-        "React JS framework",
-        "Redux for State Mnanagement",
+        "Java",
+        "Javascript",
+        "MERN Stack framework",
+        "Redux",
         "Building REST API",
         "Managing database",
       ],
@@ -41,8 +42,19 @@ export default function AboutMe(props) {
   const renderHighlight = () => {
     return SCREEN_CONSTSANTS.highlights.bullets.map((value, i) => (
       <div className="highlight" key={i}>
-        <div className="highlight-blob"></div>
-        <span>{value}</span>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="highlight-blob"
+        ></motion.div>
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          {value}
+        </motion.span>
       </div>
     ));
   };
@@ -57,9 +69,14 @@ export default function AboutMe(props) {
         <div className="about-me-card">
           <div className="about-me-profile"></div>
           <div className="about-me-details">
-            <span className="about-me-description">
+            <motion.span
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="about-me-description"
+            >
               {SCREEN_CONSTSANTS.description}
-            </span>
+            </motion.span>
             <div className="about-me-highlights">
               <div className="highlight-heading">
                 <span>{SCREEN_CONSTSANTS.highlights.heading}</span>
@@ -67,54 +84,180 @@ export default function AboutMe(props) {
               {renderHighlight()}
             </div>
             <section className="skills">
-              <h3>Skills</h3>
+              <motion.h3
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                Skills
+              </motion.h3>
               <div className="skill-container">
                 <div className="skill-card">
-                  <p>Java</p>
-                  <img src={java} alt="" />
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    Java
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={java}
+                    alt=""
+                  />
                 </div>
                 <div className="skill-card">
-                  <p>JavaScript</p>
-                  <img src={javaScript} alt="" />
-                </div>
-
-                <div className="skill-card">
-                  <p>React</p>
-                  <img src={react} alt="" />
-                </div>
-
-                <div className="skill-card">
-                  <p>MongoDB</p>
-                  <img src={mongodb} alt="" />
-                </div>
-
-                <div className="skill-card">
-                  <p>Node</p>
-                  <img src={node} alt="" />
-                </div>
-
-                <div className="skill-card">
-                  <p>HTML</p>
-                  <img src={html} alt="" />
-                </div>
-
-                <div className="skill-card">
-                  <p>CSS</p>
-                  <img src={css} alt="" />
-                </div>
-
-                <div className="skill-card">
-                  <p>Tailwind CSS</p>
-                  <img src={tailwind} alt="" />
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    JavaScript
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={javaScript}
+                    alt=""
+                  />
                 </div>
 
                 <div className="skill-card">
-                  <p>MYSQL</p>
-                  <img src={sql} alt="" />
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    React
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={react}
+                    alt=""
+                  />
+                </div>
+
+                <div className="skill-card">
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    MongoDB
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={mongodb}
+                    alt=""
+                  />
+                </div>
+
+                <div className="skill-card">
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    Node
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={node}
+                    alt=""
+                  />
+                </div>
+
+                <div className="skill-card">
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    HTML
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={html}
+                    alt=""
+                  />
+                </div>
+
+                <div className="skill-card">
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    CSS
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={css}
+                    alt=""
+                  />
+                </div>
+
+                <div className="skill-card">
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    Tailwind CSS
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={tailwind}
+                    alt=""
+                  />
+                </div>
+
+                <div className="skill-card">
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    MYSQL
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={sql}
+                    alt=""
+                  />
                 </div>
                 <div className="skill-card">
-                  <p>TypeScript</p>
-                  <img src={typescript} alt="" />
+                  <motion.p
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    TypeScript
+                  </motion.p>
+                  <motion.img
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    src={typescript}
+                    alt=""
+                  />
                 </div>
               </div>
             </section>

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion/dist/framer-motion";
 
 import foodapp from "../../assets/Project/foodapp.png";
-import pokemon from "../../assets/Project/pokemon.png";
+import netflixGPT from "../../assets/Project/netflixGPT.png";
 import tictactoe from "../../assets/Project/tictactoe.png";
 import typingtest from "../../assets/Project/typingtest.png";
 
@@ -69,7 +69,12 @@ export default function Projects(props) {
           subHeading={"Few of my  Applications"}
         />
         <section className="project-section " id={props.id || ""}>
-          <div className="project-scroll">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="project-scroll"
+          >
             <div className="project">
               <div className="project-image">
                 <img src={foodapp} alt="" className="project-img" />
@@ -92,6 +97,35 @@ export default function Projects(props) {
                 </a>
                 <a
                   href="https://github.com/Abhitachi/FOOD-APP.git"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div className="project">
+              <div className="project-image">
+                <img src={netflixGPT} alt="" className="project-img" />
+              </div>
+              <div className="project-text">
+                <h3 className="project-title">Netflix GPT</h3>
+                <ul className="project-tags">
+                  <li>React</li>
+                  <li>Redux</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+              </div>
+              <div className="project-links">
+                <a
+                  href="https://netflix-gpt-blush-three.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Visit Site
+                </a>
+                <a
+                  href="https://github.com/Abhitachi/Netflix_GPT.git"
                   target="_blank"
                   rel="noopener"
                 >
@@ -157,36 +191,7 @@ export default function Projects(props) {
                 </a>
               </div>
             </div>
-            <div className="project">
-              <div className="project-image">
-                <img src={pokemon} alt="" className="project-img" />
-              </div>
-              <div className="project-text">
-                <h3 className="project-title">Poke Mon</h3>
-                <ul className="project-tags">
-                  <li>JavaScript</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </div>
-              <div className="project-links">
-                <a
-                  href="https://abhitachi.github.io/Poke_Mon/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Visit Site
-                </a>
-                <a
-                  href="https://github.com/Abhitachi/Poke_Mon.git"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Source Code
-                </a>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </section>
       </motion.div>
     </div>

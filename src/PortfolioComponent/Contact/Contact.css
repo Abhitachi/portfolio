@@ -105,8 +105,32 @@
       flex: 0.9;
     }
   }
-  @media screen and (max-width: 414px) {
-    .central-form h2 {
+  @media screen and (max-width: 768px) {
+    h1 {
       font-size: 16px;
+      /* text-wrap: nowrap; */
     }
+  }
+
+  @media screen and (max-width: 380px) {
+    h1 {
+      font-size: 12px;
+      text-wrap: nowrap;
+    }
+
+    .col{
+      margin:0;
+    }
+    .title{
+      font-size: 14px;
+    }
+    
+  }
+
+  
+  @media screen and (max-width: 320px) {
+  
+   .main-container{
+    overflow-x: hidden;
+   }  
   }

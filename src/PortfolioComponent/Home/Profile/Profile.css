@@ -6,6 +6,9 @@
   min-height: fit-content;
 }
 
+.staticWord{
+  display: none;
+}
 .profile-parent {
   display: flex;
   align-items: center;
@@ -14,6 +17,7 @@
 .profile-details-name {
   font-size: 24px;
   font-family: "Poppins SemiBold";
+  animation: fadeInLeft;
 }
 .profile-details-role {
   display: flex;
@@ -58,6 +62,7 @@
   height: 92%;
   width: 90%;
   background-image: url("../../../assets/Home/IMG-20190608-WA0004.png");
+  filter: blur(40%);
   background-size: cover;
   border-radius: 10%;
   background-repeat: no-repeat;
@@ -99,6 +104,11 @@
     width: 320px;
     margin: 0 0 0 4px;
   }
+
+  .profile-picture-background{
+    /* border-radius: 50%; */
+    background-image: url("../../../assets//Home/abhi.png");
+  }
 }
 @media screen and (max-width: 810px) {
   .profile-picture {
@@ -107,6 +117,10 @@
   .profile-parent {
     flex-direction: column-reverse;
     margin: 40px 0 0 0;
+  }
+  .profile-picture-background{
+    /* border-radius: 50%; */
+    background-image: url("../../../assets//Home/abhi.png");
   }
   .profile-options {
     display: flex;
@@ -124,17 +138,54 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 475px) {
   .profile-picture {
     height: 275px;
     width: 275px;
     margin-top: -90px;
+    /* border-radius: 50%; */
+  }
+
+  .profile-parent{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+  }
+
+  .floatingWord{
+    display: none;
+  }
+  .staticWord{
+    display: block;
+  }
+  .profile-picture-background{
+    /* border-radius: 50%; */
+    background-image: url("../../../assets//Home/abhi.png");
   }
   .profile-details {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: cursive;
   }
-  .primary-text h1{
-    font-size: large;
+  .primary-text h3{
+    font-size: medium;
     font-weight: bolder;
+    /* font-family: cursive; */
+  }
+  .profile-details-name{
+    font-family: cursive;
+  }
+  .profile-role-tagline{
+    /* font-family: cursive; */
+    font-size: medium;
+    margin-top: 10px;
   }
 }
+
+/* @keyframes  */

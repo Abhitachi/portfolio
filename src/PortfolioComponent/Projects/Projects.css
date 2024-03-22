@@ -172,3 +172,22 @@
       min-width: 75vw;
     }
   }
+
+  @media screen and (max-width: 464px) {
+    .project{
+      /* min-width: 50vw; */
+      /* overflow-x: hidden; */
+    }
+    .project-scroll{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .project + .project {
+      margin-left: 0;
+  }
+    
+  }

@@ -118,6 +118,14 @@ body ::-webkit-scrollbar-thumb {
   font-size: 12px;
   background-color: #ff5823;
 }
+
+
+.loader{
+  display: flex;
+  gap:8px;
+  font-size: x-large;
+}
+
 @media only screen and (max-width: 568px) {
   .highlighted-btn {
     z-index: -900;
@@ -134,13 +142,24 @@ body ::-webkit-scrollbar-thumb {
   transition: all 0.8s ease;
 }
 
+.preloader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  
+}
+
 .preloading-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap:25px;
   /* max-height: ; */
-  margin-top: 250px;
+  /* margin-top: 250px; */
 }
 
 .box {
@@ -200,5 +219,26 @@ body ::-webkit-scrollbar-thumb {
   100% {
     opacity: 0;/* Blue */
     transform: translateY(0px); 
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .preloader{
+    overflow-x: hidden;
+  }
+  
+  body{
+    overflow-x: hidden;
+  }
+
+  .box {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border-radius: 6px;
+    margin-top: 4px;
+    display: inline-block;
+    animation: 0.5s loadingAnimation 0.5s all  repeat all;
+    transition: all;
   }
 }

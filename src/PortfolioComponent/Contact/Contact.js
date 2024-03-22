@@ -44,8 +44,19 @@ export default function ContactMe(props) {
         <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Me"} />
         <div className="central-form">
           <div className="col">
-            <h1>Thank You For Visiting the Page</h1>{" "}
-            <div className="social-icons">
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              Thank You For Visiting the Page
+            </motion.h1>{" "}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="social-icons"
+            >
               <a href="https://www.linkedin.com/in/abhishek-shettar-46342315b/">
                 <i className="fa-brands fa-linkedin"></i>
               </a>
@@ -64,7 +75,7 @@ export default function ContactMe(props) {
               <a href="https://twitter.com/abhishekshetter">
                 <i className="fa-brands fa-x-twitter"></i>
               </a>
-            </div>
+            </motion.div>
             <h2 className="title">
               <a href="mailto:abhishekshetter1999@gmail.com" target="_blank">
                 <TypeAnimation
